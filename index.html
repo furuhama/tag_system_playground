@@ -54,6 +54,16 @@
             flex: 1;
         }
 
+        .delete-rule {
+            background-color: #dc3545;
+            padding: 8px 12px;
+            font-size: 14px;
+        }
+
+        .delete-rule:hover {
+            background-color: #c82333;
+        }
+
         button {
             background-color: #4CAF50;
             color: white;
@@ -108,10 +118,12 @@
                 <div class="rule-input">
                     <input type="text" placeholder="Input character" class="rule-input-char" value="0">
                     <input type="text" placeholder="Output string" class="rule-output-string" value="0">
+                    <button class="delete-rule" onclick="deleteRule(this)">✕</button>
                 </div>
                 <div class="rule-input">
                     <input type="text" placeholder="Input character" class="rule-input-char" value="1">
                     <input type="text" placeholder="Output string" class="rule-output-string" value="101">
+                    <button class="delete-rule" onclick="deleteRule(this)">✕</button>
                 </div>
             </div>
             <button onclick="addRule()">Add Rule</button>

@@ -1,3 +1,7 @@
+function deleteRule(button) {
+    button.parentElement.remove();
+}
+
 function addRule() {
     const container = document.getElementById('rules-container');
     const ruleDiv = document.createElement('div');
@@ -13,8 +17,14 @@ function addRule() {
     outputString.className = 'rule-output-string';
     outputString.placeholder = 'Output string';
 
+    const deleteButton = document.createElement('button');
+    deleteButton.className = 'delete-rule';
+    deleteButton.onclick = function() { deleteRule(this); };
+    deleteButton.textContent = '✕';
+
     ruleDiv.appendChild(inputChar);
     ruleDiv.appendChild(outputString);
+    ruleDiv.appendChild(deleteButton);
     container.appendChild(ruleDiv);
 }
 
